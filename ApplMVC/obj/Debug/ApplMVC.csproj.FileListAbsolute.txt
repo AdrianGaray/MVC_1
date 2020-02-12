@@ -68,7 +68,6 @@ C:\Users\Gary\Documents\Udemy\7 - ASP_NET_MVC\ApplMVC\ApplMVC\bin\es\System.Web.
 C:\Users\Gary\Documents\Udemy\7 - ASP_NET_MVC\ApplMVC\ApplMVC\bin\es\System.Web.Webpages.Razor.resources.dll
 C:\Users\Gary\Documents\Udemy\7 - ASP_NET_MVC\ApplMVC\ApplMVC\bin\es\System.Web.Helpers.resources.dll
 C:\Users\Gary\Documents\Udemy\7 - ASP_NET_MVC\ApplMVC\ApplMVC\bin\es\System.Web.Mvc.resources.dll
-C:\Users\Gary\Documents\Udemy\7 - ASP_NET_MVC\ApplMVC\ApplMVC\obj\Debug\ApplMVC.csprojAssemblyReference.cache
 C:\Users\Gary\Documents\Udemy\7 - ASP_NET_MVC\ApplMVC\ApplMVC\obj\Debug\ApplMVC.csproj.CoreCompileInputs.cache
 C:\Users\Gary\Documents\Udemy\7 - ASP_NET_MVC\ApplMVC\ApplMVC\obj\Debug\ApplMVC.csproj.CopyComplete
 C:\Users\Gary\Documents\Udemy\7 - ASP_NET_MVC\ApplMVC\ApplMVC\obj\Debug\ApplMVC.dll
