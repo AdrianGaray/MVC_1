@@ -15,5 +15,13 @@ namespace ApplMVC.Controllers
             var input = Server.HtmlEncode(nombre);
             return Content(input);
         }
+
+        // Selector: HttpGet
+        [HttpGet]
+        public ActionResult Buscar()
+        {
+            var input = "Este es un selector HTTP GET";
+            return Content(input);
+        }
     }
 }
