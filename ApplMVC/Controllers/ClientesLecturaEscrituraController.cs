@@ -52,7 +52,8 @@ namespace ApplMVC.Controllers
         public ActionResult Create(Clientes emp)
         {
             try
-            {                
+            {         
+                //Ejemplo Model Binding
                 empList.Add(emp);
 
                 return RedirectToAction("Index");
