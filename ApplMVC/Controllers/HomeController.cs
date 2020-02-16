@@ -28,5 +28,17 @@ namespace ApplMVC.Controllers
         {
             return "Son las " + DateTime.Now.ToString("T");
         }
+
+        // Agregar una Vista
+        public ActionResult MiVista()
+        {
+            return View();
+        }
+
+        // Agregar razor a la Vista
+        public ActionResult CreacionRazor()
+        {
+            return View();
+        }
     }
 }

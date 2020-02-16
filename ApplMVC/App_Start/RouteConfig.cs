@@ -13,11 +13,11 @@ namespace ApplMVC
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-			routes.MapRoute(
-	             "Clientes",
-	             "Clientes/{nombre}",
-	            defaults: new { controller = "Clientes", action = "Buscar", nombre = UrlParameter.Optional }
-            );
+			//routes.MapRoute(
+	  //           "Clientes",
+	  //           "Clientes/{nombre}",
+	  //          defaults: new { controller = "Clientes", action = "Buscar", nombre = UrlParameter.Optional }
+   //         );
 
             routes.MapRoute(
                 name: "Default",
