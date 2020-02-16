@@ -49,11 +49,11 @@ namespace ApplMVC.Controllers
 
         // POST: ClientesLecturaEscritura/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Clientes emp)
         {
             try
-            {
-                // TODO: Add insert logic here
+            {                
+                empList.Add(emp);
 
                 return RedirectToAction("Index");
             }
