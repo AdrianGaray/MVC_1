@@ -26,10 +26,12 @@ namespace ApplMVC.Controllers
                 },
         };
 
+        private EmpDBContext db = new EmpDBContext(); // EmpDBContext viene de Entity Framework y re
         // GET: ClientesLecturaEscritura
         public ActionResult Index()
         {
-            var Clientes = from e in empList
+            //var Clientes = from e in empList
+            var Clientes = from e in db.Clientes // consulta nuestra base de datos clientes
                            orderby e.ID
                            select e;
             return View(Clientes);
@@ -54,7 +56,10 @@ namespace ApplMVC.Controllers
             try
             {         
                 //Ejemplo Model Binding
-                empList.Add(emp);
+                //empList.Add(emp);
+                
+                db.Clientes.Add(emp); // Entity Framework: se cambia la recepcion de datos
+                db.SaveChanges(); // guarda los datos que hermos realizados
 
                 return RedirectToAction("Index");
             }
@@ -69,7 +74,11 @@ namespace ApplMVC.Controllers
         {
             List<Clientes> empList = TodosLosClientes();
             // selecciona el id que se le paso por parametro
-            var Clientes = empList.Single(m => m.ID == id);
+            //var Clientes = empList.Single(m => m.ID == id);
+
+            // se cambia la variable de lista por la variabl  de base de datos(db.Clientes)
+            var Clientes = db.Clientes.Single(m => m.ID == id);
+
             return View(Clientes);
         }
 
@@ -79,11 +88,15 @@ namespace ApplMVC.Controllers
         {
             try
             {
-                var clientes = empList.Single(m => m.ID == id);
+                // var clientes = empList.Single(m => m.ID == id);
+                // se cambia la lista por la llamada a la base de datos
+                var clientes = db.Clientes.Single(m => m.ID == id);
+
                 // Miestras esta actualizando nuestro modelo. Le vamos a decir que nos vuelva a la pagina de inicio
                 if (TryUpdateModel(clientes))
                 {
-                    return RedirectToAction("Index");
+                    db.SaveChanges(); // guarda los datos que hermos realizados
+                    return RedirectToAction("Index"); 
                 }
                 return View(clientes); // muestra la vista clientes
             }
